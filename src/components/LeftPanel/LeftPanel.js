@@ -21,7 +21,8 @@ const LeftPanel = ({ setLanguageTags, setSurveys, setSelectedSurvey, setSelected
     const ref = React.useRef();
 
     React.useEffect(() => {
-        axios.get('/api/Language')
+        const url = process.env.NODE_ENV !== 'development' ? "https://coresurveymvc.appspot.com" :""
+        axios.get(url+'/api/Language')
             .then(res => setLanguageTags(res.data))
             .catch(error =>
                 ref.current.fireSnackBar({
@@ -30,7 +31,7 @@ const LeftPanel = ({ setLanguageTags, setSurveys, setSelectedSurvey, setSelected
                 })
             )
 
-        axios.get('/api/Survey', {
+        axios.get(url+'/api/Survey', {
             headers: {
                 'Authorization': authorizationToken
             }
@@ -52,8 +53,9 @@ const LeftPanel = ({ setLanguageTags, setSurveys, setSelectedSurvey, setSelected
 
     const handleProceed = () => {
         //todo can be replaced with switch-case
+        const url = process.env.NODE_ENV !== 'development' ? "https://coresurveymvc.appspot.com" :""
         if (selectedOperation === "_REMOVE") {
-            axios.delete(`/api/Survey/${selectedSurvey}`, {
+            axios.delete(url+`/api/Survey/${selectedSurvey}`, {
                 headers: {
                     'Authorization': authorizationToken
                 }

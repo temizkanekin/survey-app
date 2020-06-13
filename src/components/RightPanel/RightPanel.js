@@ -24,11 +24,13 @@ const RightPanel = ({ changeLeftPanelDisableStatus, addSurvey, updateSurvey, sur
 
     const handleBack = () => {
         changeLeftPanelDisableStatus(false)
+        setSelectedSurveyObject({ Name: "" })
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        operation === "_CREATE" ? axios.post('/api/Survey', { "Name": `${selectedSurveyObject.Name}` }, {
+        const url = process.env.NODE_ENV !== 'development' ? "https://coresurveymvc.appspot.com" :""
+        operation === "_CREATE" ? axios.post(url+'/api/Survey', { "Name": `${selectedSurveyObject.Name}` }, {
             headers: {
                 'Authorization': authorizationToken
             }
@@ -47,7 +49,7 @@ const RightPanel = ({ changeLeftPanelDisableStatus, addSurvey, updateSurvey, sur
                 })
             )
             :
-            axios.put(`/api/Survey/${selectedSurveyObject.ID}`, selectedSurveyObject, {
+            axios.put(url+`/api/Survey/${selectedSurveyObject.ID}`, selectedSurveyObject, {
                 headers: {
                     'Authorization': authorizationToken
                 }
