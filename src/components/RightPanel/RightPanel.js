@@ -19,7 +19,7 @@ const RightPanel = ({ changeLeftPanelDisableStatus, addSurvey, updateSurvey, sur
 
     React.useEffect(() => {
         const newSurvey = surveys.filter(s => s.ID === parseInt(survey))[0]
-        newSurvey && setSelectedSurveyObject(newSurvey)
+        newSurvey ? setSelectedSurveyObject(newSurvey) : setSelectedSurveyObject({ Name: "" })
     }, [survey, surveys])
 
     const handleBack = () => {

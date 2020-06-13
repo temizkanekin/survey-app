@@ -127,7 +127,7 @@ const LeftPanel = ({ setLanguageTags, setSurveys, setSelectedSurvey, setSelected
                     <div className="w-full flex justify-end">
                         <button
                             type="button"
-                            disabled={!selectedOperation || (selectedOperation === "_REMOVE" && surveys.length === 0)}
+                            disabled={(selectedOperation !== "_CREATE" && !selectedSurvey) || (selectedOperation === "_REMOVE" && surveys.length === 0)}
                             className="text-center"
                             onClick={handleProceed}
                         >
