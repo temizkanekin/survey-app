@@ -1,26 +1,47 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Toolbar from './components/Toolbar/Toolbar'
+import LeftPanel from './components/LeftPanel/LeftPanel'
+import RightPanel from './components/RightPanel/RightPanel'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import {IntlProvider} from "react-intl";
+import { connect } from 'react-redux'
+import messages_tr from './localization/tr.json'
+import messages_en from './localization/en.json'
 
-function App() {
+const messages = {
+  'TR': messages_tr,
+  'EN': messages_en
+};
+
+const App = ({selectedLanguage,...props}) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <IntlProvider locale='en' messages={messages[selectedLanguage]}>
+    <Router>
+    <div className="header">
+      <Toolbar />
     </div>
+    <div className="content">
+      <div className="w-1/2 h-full flex border-r border-white border-solid">
+        <LeftPanel />
+      </div>
+      <div className="w-1/2 h-full flex">
+      <Switch>
+        <Route path="/operation/:operation" component={RightPanel} exact />
+        <Route path="/operation/:operation/survey/:survey" component={RightPanel} exact />
+      </Switch>
+      </div>
+    </div>
+    </Router>
+    </IntlProvider>
   );
 }
 
-export default App;
+const mapStateToProps = (state, ownProps) => {
+  return { ...state.surveyState }
+}
+
+export default connect(
+  mapStateToProps,
+  undefined
+)(App);

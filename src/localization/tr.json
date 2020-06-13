@@ -1,0 +1,19 @@
+{
+    "toolbar.question": "Soru",
+    "toolbar.language": "Dil Seçin",
+    "leftPanel.defaultOption": "bir işlem seçin",
+    "leftPanel.operation": "Uygulanacak işlemi seçin",
+    "leftPanel.survey": "Anket seçin",
+    "generic.proceed": "İlerle",
+    "generic.back": "Geri",
+    "generic.submit": "Gönder",
+
+    "snackbar.languageTagsFailed" : "Dil etiketleri getirilemedi",
+    "snackbar.surveysFailed": "Anketler getirilemedi",
+    "snackbar.removeSuccess": "Anket başarıyla silindi",
+    "snackbar.removeFailed": "Anket silinirken hata oluştu",
+    "snackbar.addSuccess": "Anket başarıyla eklendi",
+    "snackbar.addFailed": "Anket eklenirken hata oluştu",
+    "snackbar.updateSuccess": "Anket başarıyla güncellendi",
+    "snackbar.updateFailed": "Anket güncellenirken hata oluştu"
+}

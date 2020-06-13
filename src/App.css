@@ -1,4 +1,45 @@
-.App {
+.header {
+  width: 100%;
+  display: flex;
+  overflow: auto;
+  border-bottom: 1px solid white;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 100px);
+  overflow: auto;
+}
+
+*{
+  color: white;
+}
+
+*{
+  background-color: #121212;
+}
+
+button {
+  background-color: white;
+  color: #4299e1;
+  width: 70px;
+  height: 30px;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+select,input {
+  width: 200px;
+  border: 1px solid white;
+  border-radius: 3px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +76,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */

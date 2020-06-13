@@ -1,0 +1,31 @@
+/* .leftPanel-select{
+    box-sizing: border-box;
+    padding-left: 3px;
+    width: 150px;
+    max-width: 250px;
+} */
+
+.label-disabled {
+    opacity: .3;
+}
+
+/* button {
+    background-color: white;
+    color: #4299e1;
+    width: 70px;
+    height: 30px;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    transition-duration: 0.4s;
+} */
+
+button:disabled{
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.leftPanel-disabled {
+    transition-duration: 0.4s;
+    opacity: .3;
+    pointer-events: none;
+}

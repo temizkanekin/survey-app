@@ -1,0 +1,19 @@
+{
+    "toolbar.question": "Question",
+    "toolbar.language": "Choose Language",
+    "leftPanel.defaultOption": "select an option",
+    "leftPanel.operation": "Select Operation",
+    "leftPanel.survey": "Select Survey",
+    "generic.proceed": "Proceed",
+    "generic.back": "Back",
+    "generic.submit": "Submit",
+
+    "snackbar.languageTagsFailed" : "Failed to fetch language tags",
+    "snackbar.surveysFailed": "Failed to fetch surveys",
+    "snackbar.removeSuccess": "Successfully removed a survey",
+    "snackbar.removeFailed": "Failed to remove a survey",
+    "snackbar.addSuccess": "Successfully added a survey",
+    "snackbar.addFailed": "Failed to add a survey",
+    "snackbar.updateSuccess": "Successfully updated a survey",
+    "snackbar.updateFailed": "Failed to update a survey"
+}

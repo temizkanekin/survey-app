@@ -1,0 +1,17 @@
+/* .rightPanel-input {
+    border: 1px solid black;
+    border-radius: 3px;
+    box-sizing: border-box;
+    padding: 5px;
+} */
+
+/* .rightPanel-button {
+    background-color: #4299e1;
+    color: white;
+} */
+
+.rightPanel-disabled {
+    transition-duration: 0.4s;
+    opacity: 0;
+    pointer-events: none;
+}
