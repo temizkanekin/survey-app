@@ -10,8 +10,35 @@
     color: white;
 } */
 
+.rightPanel-input {
+    width: 50%;
+}
+
 .rightPanel-disabled {
     transition-duration: 0.4s;
     opacity: 0;
     pointer-events: none;
+}
+
+.rightPanel-buttonRow{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.rightPanel-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1024px){
+    .rightPanel-row {
+        flex-direction: column;
+    }
+    .rightPanel-input {
+        width: 100%;
+    }
 }

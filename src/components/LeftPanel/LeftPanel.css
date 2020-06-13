@@ -9,6 +9,20 @@
     opacity: .3;
 }
 
+.leftPanel-row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    flex-direction: row;
+}
+
+@media only screen and (max-width: 1024px){
+    .leftPanel-row {
+        flex-direction: column;
+    }
+}
+
 /* button {
     background-color: white;
     color: #4299e1;

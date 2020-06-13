@@ -87,7 +87,7 @@ const LeftPanel = ({ setLanguageTags, setSurveys, setSelectedSurvey, setSelected
             <SnackBar ref={ref} />
             <div className={`m-auto w-4/5 ${leftPanelDisabled && "leftPanel-disabled"}`}>
                 <div className="flex flex-col">
-                    <div className="w-full flex justify-between mb-4">
+                    <div className="leftPanel-row">
                         <label htmlFor="operations"><FormattedMessage id="leftPanel.operation" /> :</label>
                         <select
                             className="leftPanel-select"
@@ -106,7 +106,7 @@ const LeftPanel = ({ setLanguageTags, setSurveys, setSelectedSurvey, setSelected
                             }
                         </select>
                     </div>
-                    <div className="w-full flex justify-between mb-4">
+                    <div className="leftPanel-row">
                         <label className={isSurveySelectionDisabled ? "label-disabled" : ""} htmlFor="surveys"><FormattedMessage id="leftPanel.survey" /> :</label>
                         <select
                             disabled={isSurveySelectionDisabled}

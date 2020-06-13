@@ -75,10 +75,10 @@ const RightPanel = ({ changeLeftPanelDisableStatus, addSurvey, updateSurvey, sur
                 <div className="flex flex-col">
                     <form onSubmit={handleSubmit}>
                         <div className="w-full flex flex-col mb-4">
-                            <div className="w-full flex mb-4 justify-between">
-                                <label className="" htmlFor="surveyname">{languageTags.length > 0 && languageTags.filter(tag => tag.Code === selectedLanguage)[0].TagList["_SURVEY_NAME"]}</label>
+                            <div className="rightPanel-row mb-4">
+                                <label className="" htmlFor="surveyname">{languageTags.length > 0 && languageTags.filter(tag => tag.Code === selectedLanguage)[0].TagList["_SURVEY_NAME"]} :</label>
                                 <input
-                                    className=""
+                                    className="rightPanel-input"
                                     type="text"
                                     id="surveyname"
                                     name="surveyname"
@@ -86,7 +86,7 @@ const RightPanel = ({ changeLeftPanelDisableStatus, addSurvey, updateSurvey, sur
                                     onChange={(e) => setSelectedSurveyObject({ ...selectedSurveyObject, "Name": e.target.value })}
                                 />
                             </div>
-                            <div className="w-full flex justify-between">
+                            <div className="rightPanel-buttonRow">
                                 <button
                                     type="button"
                                     className="text-center rightPanel-button"

@@ -15,3 +15,9 @@
 .snackbar-fail {
     background-color: #f44336;
 }
+
+@media only screen and (max-width: 1024px){
+    .snackbar-root {
+        left: 13%;
+    }
+}
